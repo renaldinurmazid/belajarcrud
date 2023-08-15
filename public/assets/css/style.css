@@ -1877,7 +1877,7 @@ h6 .badge {
   left: 250px;
   right: 5px;
   position: absolute;
-  z-index: 890;
+  /* z-index: 890; */
   background-color: transparent;
 }
 .navbar.active {
@@ -1918,7 +1918,7 @@ h6 .badge {
 }
 .navbar .form-inline .form-control:focus, .navbar .form-inline .form-control:focus + .btn {
   position: relative;
-  z-index: 9001;
+  /* z-index: 9001; */
 }
 .navbar .form-inline .form-control:focus + .btn + .search-backdrop {
   opacity: 0.6;
@@ -1941,7 +1941,7 @@ h6 .badge {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 9000;
+  /* z-index: 9000; */
   background-color: #000;
   opacity: 0;
   visibility: hidden;
@@ -1949,7 +1949,7 @@ h6 .badge {
 }
 .navbar .form-inline .search-result {
   position: absolute;
-  z-index: 9002;
+  /* z-index: 9002; */
   top: 100px;
   background-color: #fff;
   border-radius: 3px;
@@ -2076,7 +2076,7 @@ h6 .badge {
     top: 10px;
     left: 10px;
     right: 10px;
-    z-index: 892;
+    /* z-index: 892; */
     display: none;
   }
   .navbar .form-inline .search-element .form-control {
@@ -3039,7 +3039,7 @@ pre {
   height: 100%;
   width: 250px;
   background-color: #fff;
-  z-index: 880;
+  /* z-index: 880; */
   left: 0;
 }
 
@@ -3188,12 +3188,12 @@ body.sidebar-mini .main-content, body.sidebar-mini .main-footer {
 }
 
 body.layout-2 .navbar-bg {
-  z-index: 889;
+  /* z-index: 889; */
   height: 70px;
 }
 body.layout-2 .navbar {
   left: 0;
-  z-index: 890;
+  /* z-index: 890; */
 }
 body.layout-2 .main-wrapper {
   display: flex;
@@ -3263,7 +3263,7 @@ body.layout-3 .navbar.navbar-secondary {
   background-color: #fff;
   top: 70px;
   padding: 0;
-  z-index: 889;
+  /* z-index: 889; */
 }
 body.layout-3 .navbar.navbar-secondary .navbar-nav > .nav-item.active > .nav-link {
   color: #6777ef;
@@ -3580,7 +3580,7 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
   .main-sidebar {
     position: fixed !important;
     margin-top: 0 !important;
-    z-index: 891;
+    /* z-index: 891; */
   }
   body.layout-2 .main-wrapper,
 body.layout-3 .main-wrapper {
@@ -3600,7 +3600,7 @@ body.layout-3 .main-wrapper {
     overflow: hidden;
   }
   body.search-show .navbar {
-    z-index: 892;
+    /* z-index: 892; */
   }
   body.sidebar-show {
     overflow: hidden;
@@ -3614,7 +3614,7 @@ body.layout-3 .main-wrapper {
     height: 100%;
     background-color: #000;
     opacity: 0;
-    z-index: 891;
+    /* z-index: 891; */
     -webkit-animation-name: fadeinbackdrop;
     animation-name: fadeinbackdrop;
     -webkit-animation-duration: 1s;

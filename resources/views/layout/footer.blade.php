@@ -1,4 +1,4 @@
-<footer class="main-footer">
+<footer class="main-footer z-10">
     <div class="footer-left">
         Copyright &copy; 2023 <div class="bullet"></div> Design By Renaldi
             Nurmazid</a>
@@ -7,9 +7,6 @@
 
     </div>
 </footer>
-</div>
-</div>
-</body>
 
 <!-- General JS Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -30,6 +27,5 @@ integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07j
 <script src="{{ asset('assets/js/custom.js') }}"></script>
 
 <!-- Page Specific JS File -->
-</body>
 
 </html>

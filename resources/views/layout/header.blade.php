@@ -15,4 +15,7 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
+    <link rel="stylesheet" href="{{ asset('resources/css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('resources/js/app.js') }}">
+    @vite(['resources/css/app.css','resources/js/app.js'])
 </head>
