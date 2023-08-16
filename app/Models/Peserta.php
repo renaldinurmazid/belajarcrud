@@ -12,6 +12,11 @@ class Peserta extends Model
     protected $table = 'peserta';
     
     protected $fillable = [
-        'nis', 'namalengkap', 'jk', 'kelas', 'tgllahir', 'nilai_web', 'nilai_pbo', 'nilai_db',
+        'nis', 'namalengkap', 'jk', 'kelas_id', 'tgllahir', 'nilai_web', 'nilai_pbo', 'nilai_db',
     ];
+
+    public function kelas()
+    {
+        return $this->belongsTo(Kelas::class, 'kelas_id');
+    }
 }

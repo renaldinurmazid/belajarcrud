@@ -10,9 +10,9 @@
             @method('PUT')
             <div class="mb-6 mt-3">
                 <label for="nis" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">NIS</label>
-                <input type="text" id="nis" name="nis"
+                <input type="number" id="nis" name="nis"
                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                    placeholder="Ex.12345678" required value="{{ $peserta->nis }}">
+                    placeholder="Ex.12345678" required readonly value="{{ $peserta->nis }}">
             </div>
             <div class="mb-6">
                 <label for="namalengkap"
@@ -33,10 +33,15 @@
             </div>
             <div class="mb-6">
                 <label for="kelas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kelas</label>
-                <input type="text" id="kelas" name="kelas"
+                <select id="kelas" name="kelas"
                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                    required value="{{ $peserta->kelas }}">
-            </div>
+                    required>
+                    <option value="">Pilih Kelas</option>
+                    @foreach ($kelasList as $kelasId => $namaKelas)
+                        <option value="{{ $kelasId }}" @if ($peserta->kelas_id == $kelasId) selected @endif>{{ $namaKelas }}</option>
+                    @endforeach
+                </select>
+            </div>            
             <div class="mb-6">
                 <label for="tgllahir" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tanggal
                     Lahir</label>

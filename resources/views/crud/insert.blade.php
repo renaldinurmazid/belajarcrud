@@ -9,7 +9,7 @@
             @csrf
             <div class="mb-6 mt-3">
                 <label for="nis" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">NIS</label>
-                <input type="text" id="nis" name="nis"
+                <input type="number" id="nis" name="nis"
                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                     placeholder="Ex.12345678" required>
             </div>
@@ -18,7 +18,7 @@
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
                 <input type="text" id="namalengkap" name="namalengkap"
                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                    required>
+                    required placeholder="Ex.Ahmad Hidayat">
             </div>
             <div class="mb-6">
                 <label for="jk" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jenis
@@ -32,10 +32,16 @@
             </div>
             <div class="mb-6">
                 <label for="kelas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kelas</label>
-                <input type="text" id="kelas" name="kelas"
+                <select id="kelas" name="kelas_id"
                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                     required>
+                    <option value="" disabled selected>Pilih Kelas</option>
+                    @foreach ($kelas as $kelasItem)
+                    <option value="{{ $kelasItem->id }}">{{ $kelasItem->nama_kelas }}</option>
+                    @endforeach
+                </select>
             </div>
+            
             <div class="mb-6">
                 <label for="tgllahir" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tanggal
                     Lahir</label>
@@ -48,21 +54,21 @@
                     Web</label>
                 <input type="number" id="nilai_web" name="nilai_web"
                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                    required>
+                    required placeholder="Ex.80">
             </div>
             <div class="mb-6">
                 <label for="nilai_pbo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nilai Mapel
                     PBO</label>
                 <input type="number" id="nilai_pbo" name="nilai_pbo"
                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                    required>
+                    required placeholder="Ex.80">
             </div>
             <div class="mb-6">
                 <label for="nilai_db" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nilai Mapel
                     Database</label>
                 <input type="number" id="nilai_db" name="nilai_db"
                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                    required>
+                    required placeholder="Ex.80">
             </div>
             <button type="submit"
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
